@@ -35,6 +35,25 @@
 
         return display;
     },
+    getToday: function () {
+        var today = Utility.getDate(new Date());
+        return new Date(today.getTime() - 0 * 24 * 3600000);
+    },
+    getLastWeekStarDate: function () {
+        var date = new Date();
+        var day = date.getDay();
+        var prevMonday = new Date();
+        if(date.getDay() == 1){
+            prevMonday.setDate(date.getDate() - 7);
+        }
+        else{
+            prevMonday.setDate(date.getDate() - (day-1));
+        }
+
+        prevMonday.setHours(0, 0, 0)
+
+        return new Date(prevMonday.getTime() - 1 * 24 * 3600000);
+    },
     getWeekStartDate: function () {
         var today = Utility.getDate(new Date());
         return new Date(today.getTime() - 6 * 24 * 3600000);
