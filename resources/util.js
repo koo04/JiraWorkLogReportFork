@@ -41,6 +41,8 @@
     },
     getLastWeekStarDate: function () {
         var date = new Date();
+        date.setDate(date.getDate() - 7);
+        console.log(date)
         var day = date.getDay();
         var prevMonday = new Date();
         if(date.getDay() == 1){
@@ -50,7 +52,7 @@
             prevMonday.setDate(date.getDate() - (day-1));
         }
 
-        prevMonday.setHours(0, 0, 0)
+        prevMonday.setHours(0, 0, 0);
 
         return new Date(prevMonday.getTime() - 1 * 24 * 3600000);
     },

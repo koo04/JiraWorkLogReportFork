@@ -24,7 +24,6 @@
             case 'LWK':
                 startDate = Utility.getLastWeekStarDate();
                 endDate = new Date(startDate.getTime() + 6 * 24 * 3600000);
-                console.log(startDate, endDate)
                 break;
             case '1WK':
                 startDate = Utility.getWeekStartDate();
