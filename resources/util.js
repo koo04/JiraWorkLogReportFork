@@ -39,6 +39,10 @@
         var today = Utility.getDate(new Date());
         return new Date(today.getTime() - 0 * 24 * 3600000);
     },
+    getYesterday: function () {
+        var today = Utility.getDate(new Date());
+        return new Date(today.getTime() - 1 * 24 * 3600000);
+    },
     getLastWeekStarDate: function () {
         var date = new Date();
         date.setDate(date.getDate() - 7);

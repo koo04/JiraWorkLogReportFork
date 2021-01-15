@@ -21,6 +21,9 @@
             case 'TD':
                 startDate = Utility.getToday();
                 break;
+            case 'YD':
+                startDate = Utility.getYesterday();
+                break;
             case 'LWK':
                 startDate = Utility.getLastWeekStarDate();
                 endDate = new Date(startDate.getTime() + 6 * 24 * 3600000);
