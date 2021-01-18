@@ -50,7 +50,7 @@
         var day = date.getDay();
         var prevMonday = new Date();
         if(date.getDay() == 1){
-            prevMonday.setDate(date.getDate() - 7);
+            prevMonday.setDate(date.getDate());
         }
         else{
             prevMonday.setDate(date.getDate() - (day-1));
